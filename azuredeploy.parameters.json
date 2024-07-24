@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "labName": {
-      "value": "DevTestLab-15"
+      "value": "DevTestLab-development"
     },
     "vmName": {
       "value": "DevTest-15"
@@ -12,7 +12,7 @@
       "value": "eleni"
     },
     "password": {
-      "value": "ELENI-PASSWORD"
+      "value": "mypassword123@"
     }
   }
 }

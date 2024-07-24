@@ -8,7 +8,7 @@ param location string = resourceGroup().location
 param vmName string
 
 @description('The size of the vm to be created.')
-param vmSize string = 'Standard_D4_v3'
+param vmSize string = 'Standard_B1ls'
 
 @description('The username for the local account that will be created on the new vm.')
 param userName string
