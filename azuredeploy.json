@@ -53,17 +53,25 @@
     "labVirtualNetworkId": "[resourceId('Microsoft.DevTestLab/labs/virtualnetworks', parameters('labName'), variables('labVirtualNetworkName'))]",
     "labVirtualNetworkName": "[format('Dtl{0}', parameters('labName'))]"
   },
-  "resources": [
+  "resources": [ 
     {
       "type": "Microsoft.DevTestLab/labs",
       "apiVersion": "2018-09-15",
       "name": "[parameters('labName')]",
-      "location": "[parameters('location')]"
+      "location": "[parameters('location')]",
+      "properties": {
+        "premiumDataDisk": "Standard",
+        "labStorageType": "Standard",
+        "tags": {
+        "billing": "internal"
+    }
+      }
     },
     {
       "type": "Microsoft.DevTestLab/labs/virtualnetworks",
       "apiVersion": "2018-09-15",
       "name": "[format('{0}/{1}', parameters('labName'), variables('labVirtualNetworkName'))]",
+      "properties":{},
       "dependsOn": [
         "[resourceId('Microsoft.DevTestLab/labs', parameters('labName'))]"
       ]
@@ -81,10 +89,10 @@
         "size": "[parameters('vmSize')]",
         "allowClaim": false,
         "galleryImageReference": {
-          "offer": "WindowsServer",
-          "publisher": "MicrosoftWindowsServer",
-          "sku": "2019-Datacenter",
-          "osType": "Windows",
+          "offer": "ubuntu-24_04-lts",
+          "publisher": "canonical",
+          "sku":"server-gen1",
+          "osType": "Linux",
           "version": "latest"
         }
       },

@@ -1,4 +1,4 @@
-@description('The name of the new lab instance to be created')
+@description('The name of the new lab instance')
 param labName string
 
 @description('Location for all resources.')
@@ -43,13 +43,14 @@ resource labVirtualMachine 'Microsoft.DevTestLab/labs/virtualmachines@2018-09-15
     size: vmSize
     allowClaim: false
     galleryImageReference: {
-      offer: 'WindowsServer'
-      publisher: 'MicrosoftWindowsServer'
-      sku: '2019-Datacenter'
-      osType: 'Windows'
+      offer: 'ubuntu-24_04-lts'
+      publisher: 'canonical'
+      sku: 'server-gen1'
+      osType: 'Linux'
       version: 'latest'
     }
   }
 }
 
 output labId string = lab.id
+

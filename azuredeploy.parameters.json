@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "labName": {
-      "value": "GEN-UNIQUE"
+      "value": "DevTest"
     },
     "vmName": {
-      "value": "GEN-UNIQUE-15"
+      "value": "DevTest-15"
     },
     "userName": {
-      "value": "GEN-UNIQUE"
+      "value": "eleni"
     },
     "password": {
-      "value": "GEN-PASSWORD"
+      "value": "ELENI-PASSWORD"
     }
   }
 }
