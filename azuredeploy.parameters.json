@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "labName": {
-      "value": "DevTest"
+      "value": "DevTestLab-15"
     },
     "vmName": {
       "value": "DevTest-15"
