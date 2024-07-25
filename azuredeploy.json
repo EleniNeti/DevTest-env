@@ -87,7 +87,7 @@
         "labVirtualNetworkId": "[variables('labVirtualNetworkId')]",
         "labSubnetName": "[variables('labSubnetName')]",
         "size": "[parameters('vmSize')]",
-        "allowClaim": false,
+        "allowClaim": true,
         "galleryImageReference": {
           "offer": "ubuntu-24_04-lts",
           "publisher": "canonical",
